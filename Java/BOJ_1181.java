@@ -20,6 +20,7 @@ class BOJ_1181 {
 class SortingWordsAL {
     public void run() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuffer sb = new StringBuffer();
         ArrayList <String> data = new ArrayList <String> ();
         int N = Integer.parseInt(br.readLine());
         for (int i = 0; i < N; i++) {
@@ -30,9 +31,10 @@ class SortingWordsAL {
         for (ArrayList <String> item : dataByLen) {
             Collections.sort(item);
             for (String inItem : item) {
-                System.out.println(inItem);
+                sb.append(inItem + "\n");
             }
         }
+        System.out.println(sb.toString());
     }
     public ArrayList <String> removeDuplicates(ArrayList <String> data) {
         ArrayList <String> result = new ArrayList <String> ();
