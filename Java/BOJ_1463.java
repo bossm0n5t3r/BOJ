@@ -28,9 +28,9 @@ public class BOJ_1463 {
 		result[2] = 1;
 		result[3] = 1;
 		for (int i = 4; i < result.length; i++) {
-			int [] checkDiv = checkDiv(i);
+			boolean [] checkDiv = checkDiv(i);
 			for (int j = 0; j < checkDiv.length; j++) {
-				if (checkDiv[j] == 1) {
+				if (checkDiv[j]) {
 					int temp = 3 - j;
 					if (temp != 1)
 						result[i] = Math.min(result[i/temp] + 1, result[i]);
@@ -42,14 +42,14 @@ public class BOJ_1463 {
 		return result[data];
 	}
 	
-	public int [] checkDiv(int data) {
-		int [] result = new int [3];
+	public boolean [] checkDiv(int data) {
+		boolean [] result = new boolean [3];
 		if (data % 3 == 0)
-			result[0] = 1;
+			result[0] = true;
 		if (data % 2 == 0)
-			result[1] = 1;
+			result[1] = true;
 		if (data > 1)
-			result[2] = 1;
+			result[2] = true;
 		return result;
 	}
 }
