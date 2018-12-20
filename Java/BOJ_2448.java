@@ -27,7 +27,7 @@ public class BOJ_2448 {
         }
     }
 
-    static void printStars(int x, int y, int N) {
+    public void printStars(int x, int y, int N) {
         if (N == 3) {
             space[y][x+2] = '*';
             space[y+1][x+1] = '*';
