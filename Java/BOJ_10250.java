@@ -15,7 +15,6 @@ class BOJ_10250 {
         while (T-- > 0) {
             String [] temp = br.readLine().split(" ");
             int H = Integer.parseInt(temp[0]);
-            int W = Integer.parseInt(temp[1]);
             int N = Integer.parseInt(temp[2]);
             int count = 1;
             while (N > H) {
