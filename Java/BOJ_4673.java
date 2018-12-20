@@ -4,8 +4,6 @@
  * 	https://www.acmicpc.net/problem/4673
  */
 
-package BOJ;
-
 public class BOJ_4673 {
 	public static void main(String [] args) {
 		BOJ_4673 check = new BOJ_4673();
