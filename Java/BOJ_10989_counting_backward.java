@@ -33,7 +33,7 @@ class BOJ_10989_counting_backward {
     }
 
     void countingSort(int [] data) {
-        int max = 0, total = 0;
+        int max = 0;
         int [] output = new int[data.length + 1];
 
         for (int i : data) {
