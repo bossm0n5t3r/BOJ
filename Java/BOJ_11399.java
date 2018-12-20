@@ -4,8 +4,6 @@
  * 	https://www.acmicpc.net/problem/11399
  */
 
-package dynamicProgramming;
-
 import java.io.*;
 import java.util.Arrays;
 
