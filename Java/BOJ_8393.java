@@ -4,7 +4,6 @@
  * 	https://www.acmicpc.net/problem/8393
  */
 
-package BOJ;
 import java.util.*;
 
 public class BOJ_8393 {
