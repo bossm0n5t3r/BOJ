@@ -4,8 +4,6 @@
  * 	https://www.acmicpc.net/problem/9095
  */
 
-package dynamicProgramming;
-
 import java.io.*;
 
 public class BOJ_9095 {
