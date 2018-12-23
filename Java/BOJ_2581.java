@@ -13,11 +13,10 @@ class BOJ_2581 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int M = Integer.parseInt(br.readLine());
         int N = Integer.parseInt(br.readLine());
-        Prime p;
         int min = 0, sum = 0;
         boolean checkExistPrime = false;
         for (int i = M; i <= N; i++) {
-            p = new Prime(i);
+            Prime p = new Prime(i);
             if (p.checkPrime()) {
                 checkExistPrime = true;
                 if (min == 0) {
