@@ -10,7 +10,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-class BOJ_2750 {
+class BOJ_2750_merge_top_down {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
@@ -19,7 +19,7 @@ class BOJ_2750 {
         for (int i = 0; i < N; i++) {
             data[i] = Integer.parseInt(br.readLine());
         }
-        BOJ_2750 main = new BOJ_2750();
+        BOJ_2750_merge_top_down main = new BOJ_2750_merge_top_down();
         main.mergeSort(data, temp, N);
         for (int i : data) {
             System.out.println(i);
