@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-class BOJ_2750 {
+class BOJ_2750_heap {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
@@ -17,7 +17,7 @@ class BOJ_2750 {
         for (int i = 0; i < N; i++) {
             data[i] = Integer.parseInt(br.readLine());
         }
-        BOJ_2750 main = new BOJ_2750();
+        BOJ_2750_heap main = new BOJ_2750_heap();
         main.heapSort(data, N);
         for (int i : data) {
             System.out.println(i);
