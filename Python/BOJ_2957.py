@@ -13,8 +13,6 @@ def sol():
     MAX_N = 300000
     left = [0] * (MAX_N + 2)
     right = [0] * (MAX_N + 2)
-    p = [0] * (MAX_N + 1)
-    q = [0] * (MAX_N + 1)
     lev = [0] * (MAX_N + 2)
     data = [0] * (MAX_N + 1)
     C = 0
@@ -24,8 +22,6 @@ def sol():
         left[i] = i - 1
         right[i] = i + 1
     for i in range(N, -1, -1):
-        p[data[i]] = left[data[i]]
-        q[data[i]] = right[data[i]]
         right[left[data[i]]] = right[data[i]]
         left[right[data[i]]] = left[data[i]]
     lev[0] = lev[N + 1] = -1
