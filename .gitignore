@@ -1,0 +1,5 @@
+# Ignore all .class files
+*.class
+
+# Ignore .vscode folder
+.vscode/
