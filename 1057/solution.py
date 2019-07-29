@@ -1,10 +1,3 @@
-"""
-Tournament
-
-https://www.acmicpc.net/problem/1057
-"""
-
-
 def sol():
     N, k, l = map(int, input().split())
     count = 0
