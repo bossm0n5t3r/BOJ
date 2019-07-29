@@ -1,10 +1,3 @@
-"""
-Turret
-
-https://www.acmicpc.net/problem/1002
-"""
-
-
 def sol():
     T = int(input())
     for i in range(T):
