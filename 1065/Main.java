@@ -1,17 +1,11 @@
-/*
- * 	Hansu
- * 
- * 	https://www.acmicpc.net/problem/1065
- */
+import java.util.Scanner;
 
-import java.util.*;
-
-public class BOJ_1065 {
+public class Main {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		sc.close();
-		BOJ_1065 check = new BOJ_1065();
+		Main check = new Main();
 		int count = 0;
 		for (int i = 1; i <= n; i++) {
 			if (check.checkHansu(i)) count++;

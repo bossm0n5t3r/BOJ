@@ -1,11 +1,11 @@
-'''
-Hansu
+def sol():
+    N = int(input())
+    count = 0
+    for i in range(1, N+1):
+        if hansu(i):
+            count += 1
+    print(count)
 
-https://www.acmicpc.net/problem/1065
-'''
-
-N = int(input())
-count = 0
 
 def hansu(n):
     if n // 10 == 0:
@@ -16,8 +16,6 @@ def hansu(n):
         diff.append(temp[i+1] - temp[i])
     return len(set(diff)) == 1
 
-for i in range(1, N+1):
-    if hansu(i):
-        count += 1
 
-print(count)
+if __name__ == "__main__":
+    sol()
