@@ -1,10 +1,3 @@
-"""
-Fibonacci function
-
-https://www.acmicpc.net/problem/1003
-"""
-
-
 def sol():
     T = int(input())
     for i in range(T):
