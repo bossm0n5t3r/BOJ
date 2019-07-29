@@ -1,10 +1,3 @@
-"""
-CMD
-
-https://www.acmicpc.net/problem/1032
-"""
-
-
 def sol():
     N = int(input())
     file_names = []
