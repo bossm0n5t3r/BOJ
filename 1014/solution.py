@@ -1,10 +1,3 @@
-"""
-Cheating
-
-https://www.acmicpc.net/problem/1014
-"""
-
-
 import sys
 sys.setrecursionlimit(100000)
 
