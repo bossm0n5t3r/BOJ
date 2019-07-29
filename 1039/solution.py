@@ -1,10 +1,3 @@
-"""
-Exchange
-
-https://www.acmicpc.net/problem/1039
-"""
-
-
 import queue
 
 
