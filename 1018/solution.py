@@ -1,10 +1,3 @@
-'''
-To repaint a chessboard
-
-https://www.acmicpc.net/problem/1018
-'''
-
-
 def sol():
     N, M = map(int, input().split())
     board = []
