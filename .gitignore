@@ -4,5 +4,6 @@
 # Ignore .vscode folder
 .vscode/
 
-# Ignore .pytest_cache folder
+# Ignore pytest folders
 .pytest_cache/
+__pycache__/
