@@ -22,7 +22,7 @@ def dfs(nodes, check, v):
     if check[v]:
         return
     check[v] = True
-    print(str(v) + ' ', end = '')
+    print(str(v) + " ", end="")
     for element in nodes[v]:
         if not check[element]:
             dfs(nodes, check, element)
@@ -34,7 +34,7 @@ def bfs(nodes, check, v):
     check[v] = True
     while not q.empty():
         v = q.get()
-        print(str(v) + ' ', end = '')
+        print(str(v) + " ", end="")
         for element in nodes[v]:
             if not check[element]:
                 q.put(element)
