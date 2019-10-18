@@ -22,54 +22,56 @@ class Main {
     }
 }
 
+class Dot {
+    int x;
+    int y;
+
+    public Dot(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
 class Bfs {
     private int[][] data;
+    private int[][] map;
     private int N;
     private int M;
     private boolean[][] visited;
-    private Queue<int[]> q;
+    private Queue<Dot> q;
 
     Bfs(int[][] data, int N, int M) {
         this.data = data;
+        this.map = new int[N][M];
         this.N = N;
         this.M = M;
         this.visited = new boolean[N][M];
-        this.q = new LinkedList<int[]>();
+        this.q = new LinkedList<Dot>();
     }
 
     void run() {
+        int[] dy = { -1, 0, 1, 0 };
+        int[] dx = { 0, 1, 0, -1 };
         visited[0][0] = true;
-        q.add(new int[] { 0, 0, 1 });
+        map[0][0] = 1;
+        q.add(new Dot(0, 0));
         while (!q.isEmpty()) {
-            int[] current = q.poll();
-            if ((current[0] == N - 1) && (current[1] == M - 1)) {
-                System.out.println(current[2]);
+            Dot p = q.poll();
+            if (p.x == N - 1 && p.y == M - 1) {
                 break;
             }
-            if ((current[0] - 1 >= 0) && (data[current[0] - 1][current[1]] == 1)) {
-                if (!visited[current[0] - 1][current[1]]) {
-                    visited[current[0] - 1][current[1]] = true;
-                    q.add(new int[] { current[0] - 1, current[1], current[2] + 1 });
-                }
-            }
-            if ((current[0] < N - 1) && (data[current[0] + 1][current[1]] == 1)) {
-                if (!visited[current[0] + 1][current[1]]) {
-                    visited[current[0] + 1][current[1]] = true;
-                    q.add(new int[] { current[0] + 1, current[1], current[2] + 1 });
-                }
-            }
-            if ((current[1] - 1 >= 0) && (data[current[0]][current[1] - 1] == 1)) {
-                if (!visited[current[0]][current[1] - 1]) {
-                    visited[current[0]][current[1] - 1] = true;
-                    q.add(new int[] { current[0], current[1] - 1, current[2] + 1 });
-                }
-            }
-            if ((current[1] < M - 1) && (data[current[0]][current[1] + 1] == 1)) {
-                if (!visited[current[0]][current[1] + 1]) {
-                    visited[current[0]][current[1] + 1] = true;
-                    q.add(new int[] { current[0], current[1] + 1, current[2] + 1 });
+            for (int i = 0; i < 4; i++) {
+                int nx = p.x + dx[i];
+                int ny = p.y + dy[i];
+                if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
+                    if (visited[nx][ny] == false && data[nx][ny] == 1) {
+                        visited[nx][ny] = true;
+                        map[nx][ny] = map[p.x][p.y] + 1;
+                        q.offer(new Dot(nx, ny));
+                    }
                 }
             }
         }
+        System.out.println(map[N - 1][M - 1]);
     }
 }
