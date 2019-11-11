@@ -7,9 +7,7 @@ def sol():
 
 def dfs(N, M, visited, arr, cnt):
     if cnt == M:
-        for i in range(M):
-            print(arr[i], end=" ")
-        print()
+        print(" ".join(map(str, arr)))
         return
     for i in range(1, N + 1):
         if not visited[i]:
