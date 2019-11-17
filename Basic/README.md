@@ -1,3 +1,3 @@
 # 문제이름
 
-[문제링크](문제링크)
+[https://www.acmicpc.net/problem/](https://www.acmicpc.net/problem/)
