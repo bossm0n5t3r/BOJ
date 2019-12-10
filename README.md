@@ -1,5 +1,5 @@
 # BOJ
 
 - Exercise the codes of Baekjoon Online Judge
-- Languages : Java, Python
+- Languages : C++, Java, Python
 - Link : https://www.acmicpc.net/
