@@ -10,17 +10,8 @@ int main()
   for (i = 0; i < 3; i++)
   {
     cin >> a >> b >> c >> d;
-    sum = a + b + c + d;
-    if (sum == 4)
-      cout << "E\n";
-    else if (sum == 3)
-      cout << "A\n";
-    else if (sum == 2)
-      cout << "B\n";
-    else if (sum == 1)
-      cout << "C\n";
-    else
-      cout << "D\n";
+    sum = 4 - (a + b + c + d);
+    cout << (char)(sum == 0 ? 'E' : 64 + sum) << "\n";
   }
   return 0;
 }
