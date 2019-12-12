@@ -1,6 +1,6 @@
 def sol():
     N = 3
-    mal = ['E', 'A', 'B', 'C', 'D']
+    mal = ["E", "A", "B", "C", "D"]
     while N:
         N -= 1
         yut = list(map(int, input().split()))
