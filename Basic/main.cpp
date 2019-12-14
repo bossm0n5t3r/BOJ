@@ -1,10 +1,5 @@
-#include <iostream>
+#include <cstdio>
 
 using namespace std;
 
-int main()
-{
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  return 0;
-}
+int main() { return 0; }
