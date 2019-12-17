@@ -3,13 +3,13 @@
 using namespace std;
 
 int main() {
-  int N, arr[101], v, cnt = 0;
+  int N, arr[201] = {0}, v, tmp;
   scanf("%d", &N);
-  for (int i = 1; i <= N; i++) scanf("%d", &arr[i]);
-  scanf("%d", &v);
   for (int i = 1; i <= N; i++) {
-    cnt += (v == arr[i]);
+    scanf("%d", &tmp);
+    arr[100 + tmp]++;
   }
-  printf("%d", cnt);
+  scanf("%d", &v);
+  printf("%d", arr[100 + v]);
   return 0;
 }
