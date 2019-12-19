@@ -1,5 +1,5 @@
+#include <deque>
 #include <iostream>
-#include <list>
 #include <string>
 
 using namespace std;
@@ -8,28 +8,31 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
   int T;
-  int length;
   string input;
   cin >> T;
   while (T--) {
     cin >> input;
-    length = input.length();
-    list<char> l;
-    list<char>::iterator it;
-    it = l.begin();
-    for (int i = 0; i < length; i++) {
-      if (input[i] == '-') {
-        if (it != l.begin()) it = l.erase(--it);
-      } else if (input[i] == '<') {
-        if (it != l.begin()) it--;
-      } else if (input[i] == '>') {
-        if (it != l.end()) it++;
+    deque<char> L;
+    deque<char> R;
+    for (char &c : input) {
+      if (c == '<') {
+        if (L.empty()) continue;
+        R.push_back(L.back());
+        L.pop_back();
+      } else if (c == '>') {
+        if (R.empty()) continue;
+        L.push_back(R.back());
+        R.pop_back();
+      } else if (c == '-') {
+        if (L.empty()) continue;
+        L.pop_back();
       } else {
-        l.insert(it, input[i]);
+        L.push_back(c);
       }
     }
-    for (it = l.begin(); it != l.end(); it++) cout << *it;
-    cout << "\n";
+    string front(L.begin(), L.end());
+    string back(R.rbegin(), R.rend());
+    cout << front << back << '\n';
   }
   return 0;
 }
