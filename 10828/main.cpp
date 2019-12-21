@@ -8,7 +8,7 @@ typedef struct STACK {
 
   void push(int X) { s[++i] = X; }
   void pop() {
-    if (i > 0) {
+    if (i) {
       printf("%d\n", s[i]);
       s[i--] = 0;
     } else
@@ -16,13 +16,13 @@ typedef struct STACK {
   }
   void size() { printf("%d\n", i); }
   void empty() {
-    if (i > 0)
+    if (i)
       printf("0\n");
     else
       printf("1\n");
   }
   void top() {
-    if (i > 0)
+    if (i)
       printf("%d\n", s[i]);
     else
       printf("-1\n");
