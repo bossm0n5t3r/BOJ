@@ -1,7 +1,8 @@
 # Ignore all .class files
 *.class
 
-# Ignore all .exe files
+# Ignore all main(.exe) files
+main
 *.exe
 
 # Ignore .vscode folder
