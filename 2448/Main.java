@@ -1,13 +1,14 @@
 import java.io.*;
 
 public class Main {
-    static char [][] space;
-    public static void main(String [] args) throws IOException {
+    static char[][] space;
+
+    public static void main(String[] args) throws IOException {
         Main main = new Main();
         StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        space = new char [N][2*N];
+        space = new char[N][2 * N];
         main.printStars(0, 0, N);
         for (int j = 0; j < N; ++j) {
             for (int i = 0; i < 2 * N - 1; ++i) {
@@ -23,17 +24,17 @@ public class Main {
 
     public void printStars(int x, int y, int N) {
         if (N == 3) {
-            space[y][x+2] = '*';
-            space[y+1][x+1] = '*';
-            space[y+1][x+3] = '*';
-            space[y+2][x] = '*';
-            space[y+2][x+1] = '*';
-            space[y+2][x+2] = '*';
-            space[y+2][x+3] = '*';
-            space[y+2][x+4] = '*';
+            space[y][x + 2] = '*';
+            space[y + 1][x + 1] = '*';
+            space[y + 1][x + 3] = '*';
+            space[y + 2][x] = '*';
+            space[y + 2][x + 1] = '*';
+            space[y + 2][x + 2] = '*';
+            space[y + 2][x + 3] = '*';
+            space[y + 2][x + 4] = '*';
             return;
         }
-        int div = N/2;
+        int div = N / 2;
         printStars(x + div, y, div);
         printStars(x, y + div, div);
         printStars(x + N, y + div, div);
