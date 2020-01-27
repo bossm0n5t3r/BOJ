@@ -11,7 +11,7 @@ def power(A, B, C):
         return tmp * tmp % C
     else:
         tmp = power(A, (B - 1) // 2, C)
-        return ( ( (A % C) * tmp ) * tmp ) % C
+        return (((A % C) * tmp) * tmp) % C
 
 
 if __name__ == "__main__":
