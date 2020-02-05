@@ -3,7 +3,6 @@
 
 using namespace std;
 
-int M, N, H;
 int box[101][101][101];
 bool visited[101][101][101];
 int dh[] = {1, -1, 0, 0, 0, 0};
@@ -17,9 +16,9 @@ typedef struct Point {
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-  cin >> M >> N >> H;
-  int tomato;
+  int M, N, H, tomato;
   queue<Point> q;
+  cin >> M >> N >> H;
   for (int h = 0; h < H; h++) {
     for (int r = 0; r < N; r++) {
       for (int c = 0; c < M; c++) {
@@ -38,15 +37,12 @@ int main() {
     int size = q.size();
     while (size--) {
       Point p = q.front();
-      int h = p.h;
-      int r = p.r;
-      int c = p.c;
       q.pop();
-      visited[h][r][c] = true;
+      visited[p.h][p.r][p.c] = true;
       for (int i = 0; i < 6; i++) {
-        int nh = h + dh[i];
-        int nr = r + dr[i];
-        int nc = c + dc[i];
+        int nh = p.h + dh[i];
+        int nr = p.r + dr[i];
+        int nc = p.c + dc[i];
         if (0 > nh || nh >= H || 0 > nr || nr >= N || 0 > nc || nc >= M)
           continue;
         if (box[nh][nr][nc] == 0 && !visited[nh][nr][nc]) {
