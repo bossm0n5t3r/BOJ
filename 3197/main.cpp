@@ -77,8 +77,8 @@ int main() {
       waterBFS();
       water_q = water_nq;
       swan_q = swan_nq;
-      while (!water_nq.empty()) water_nq.pop();
-      while (!swan_nq.empty()) swan_nq.pop();
+      water_nq = {};
+      swan_nq = {};
       day++;
     }
   }
