@@ -1,9 +1,15 @@
+# Ignore all .jar files
+*.jar
+
 # Ignore all .class files
 *.class
 
 # Ignore all main(.exe) files
 main
 *.exe
+
+# Ignore .wakatime-project
+.wakatime-project
 
 # Ignore .vscode folder
 .vscode/
